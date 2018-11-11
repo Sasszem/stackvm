@@ -1,5 +1,5 @@
 
-#include "src/VM.hpp"
+#include "../src/VM.hpp"
 #include <iostream>
 #include <fstream>
 #include <iomanip>

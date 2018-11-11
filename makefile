@@ -5,7 +5,7 @@ all: bin/test_static bin/test_open
 build/%.o: src/%.cpp dirs
 	g++ -c -o $@ $< 
 
-build/%.o: %.cpp dirs
+build/%.o: tests/%.cpp dirs
 	g++ -c -o $@ $<
 
 bin/%: build/%.o build/VM.o dirs
