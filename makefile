@@ -1,5 +1,5 @@
 
-all: bin/test_static bin/test_open
+all: tests asm
 .PRECIOUS: build/%.o	
 
 build/%.o: src/%.cpp dirs
@@ -18,3 +18,10 @@ dirs:
 clean:
 	rm -rf bin
 	rm -rf build
+
+tests: bin/test_static bin/test_open
+
+asm: bin/test.bin
+
+bin/%.bin: asm/%.asm
+	python compiler.py $< $@
