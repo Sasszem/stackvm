@@ -21,7 +21,7 @@ clean:
 
 tests: bin/test_static bin/test_open
 
-asm: bin/test.bin
+asm: bin/test.bin bin/rot.bin
 
 bin/%.bin: asm/%.asm
 	python compiler.py $< $@
