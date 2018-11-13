@@ -63,8 +63,8 @@ void VM::exec(cell opcode)
             cell val2 = pop();
             cell val3 = pop();
             push(val2);
-            push(val3);
             push(val);
+            push(val3);
             break;
         }
 
