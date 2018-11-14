@@ -12,12 +12,11 @@ I used some ideas from https://github.com/cslarsen/stack-machine.
  - maximum 64K memory (depends on previous one)
  - currently 20 instructions (planning to add more)
  - 2 stacks (data and call)
- - currently no IO
  - error state
 
 Memory is built up by `cell`s, which are `signed short` values (can be set in the config)
 ### Instructions
-Instructions are in groups. Notice the lack of the IO group, this is still in progress
+Instructions are in groups:
 
 ##### Stack group
 - push - push the next cell on the stack
@@ -55,6 +54,12 @@ BTW FORTH also does this
  - jump zero - checks the second value, if it's zero, jumps to the location on top of the stack
  - call - calls address on top of the stack
  - return - returns from call
+
+#### IO group
+ - inchar
+ - innum
+ - outchar
+ - outnum
 
 #### Misc group
  - halt - causes the machine to stop
@@ -186,7 +191,6 @@ The supplied makefile should take care of everything, it also compiles the examp
 Note that it requires `python` and `cpp`!
 
 ## Planned:
- - IO group
  - higher-level language
  - easy-to-add custom instruction, like a syscall for nteracting with the host system
  - refactor
