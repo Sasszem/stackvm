@@ -205,12 +205,6 @@ void VM::exec(cell opcode)
             break;
         }
 
-        case OP_HALT:
-        {
-            error(ERROR_NO_ERROR, 0);
-            break;
-        }
-
         case OP_CALL:
         {
             addr to = pop();
@@ -230,6 +224,23 @@ void VM::exec(cell opcode)
         {
             addr to = pop_cs();
             ip = to;
+            break;
+        }
+
+        // IO
+
+        case OP_OUTCHAR:
+        {
+            outChar(pop());
+            break;
+        }
+
+
+
+        // Misc:
+        case OP_HALT:
+        {
+            error(ERROR_NO_ERROR, 0);
             break;
         }
 

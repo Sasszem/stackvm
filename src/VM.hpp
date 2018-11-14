@@ -27,4 +27,5 @@ class VM
         void push(cell s);
         cell pop();
         Error *getError();
+        void (*outChar)(cell);
 };

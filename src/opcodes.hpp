@@ -31,6 +31,12 @@
 #define OP_JZ 17
 #define OP_CALL 18
 #define OP_RET 19
+
+// IO
+
+#define OP_OUTCHAR 22
+
+
 // Other
 
 #define OP_HALT 20

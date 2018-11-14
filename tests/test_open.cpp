@@ -55,6 +55,12 @@ void print_array(short *arr, int len)
     std::cout<<std::endl;
 }
 
+void outChar(cell ch)
+{
+    std::cout<<(char)ch;
+}
+
+
 int main(int argc, char* argv[])
 {
     if (argc==1)
@@ -70,6 +76,7 @@ int main(int argc, char* argv[])
         return 0;
     VM *m = new VM(buff,len);
 
+    m->outChar = &outChar;
     while (m->running)
     {
         m->printStack();

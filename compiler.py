@@ -46,6 +46,9 @@ class Compiler(object):
                 "call":     "OP_CALL",
                 "ret":      "OP_RET",
 
+                # IO
+                "outchar":  "OP_OUTCHAR",
+
                 # other
                 "halt":     "OP_HALT",
                 }
