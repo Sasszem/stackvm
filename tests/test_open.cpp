@@ -60,6 +60,10 @@ void outChar(cell ch)
     std::cout<<(char)ch;
 }
 
+void outNum(cell num)
+{
+    std::cout<<num;
+}
 
 int main(int argc, char* argv[])
 {
@@ -77,6 +81,7 @@ int main(int argc, char* argv[])
     VM *m = new VM(buff,len);
 
     m->outChar = &outChar;
+    m->outNum = &outNum;
     while (m->running)
     {
         m->printStack();

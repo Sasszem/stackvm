@@ -34,8 +34,8 @@
 
 // IO
 
+#define OP_OUTNUM 21
 #define OP_OUTCHAR 22
-
 
 // Other
 

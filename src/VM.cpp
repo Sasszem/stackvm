@@ -236,6 +236,12 @@ void VM::exec(cell opcode)
         }
 
 
+        case OP_OUTNUM:
+        {
+            outNum(pop());
+            break;
+        }
+
 
         // Misc:
         case OP_HALT:

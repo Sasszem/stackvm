@@ -28,4 +28,5 @@ class VM
         cell pop();
         Error *getError();
         void (*outChar)(cell);
+        void (*outNum)(cell);
 };
