@@ -50,6 +50,7 @@ class Compiler(object):
                 "outchar":  "OP_OUTCHAR",
                 "outnum":   "OP_OUTNUM",
                 "innum":    "OP_INNUM",
+                "inchar":   "OP_INCHAR",
 
                 # other
                 "halt":     "OP_HALT",

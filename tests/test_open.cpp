@@ -72,6 +72,13 @@ cell inNum()
     return ret;
 }
 
+cell inChar()
+{
+    char ret;
+    std::cin>>ret;
+    return ret;
+}
+
 int main(int argc, char* argv[])
 {
     if (argc==1)
@@ -90,6 +97,7 @@ int main(int argc, char* argv[])
     m->outChar = &outChar;
     m->outNum = &outNum;
     m->inNum = &inNum;
+    m->inChar = &inChar;
     while (m->running)
     {
         m->printStack();

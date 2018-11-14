@@ -37,6 +37,7 @@
 #define OP_OUTNUM 21
 #define OP_OUTCHAR 22
 #define OP_INNUM 23
+#define OP_INCHAR 24
 
 // Other
 

@@ -247,6 +247,12 @@ void VM::exec(cell opcode)
             break;
         }
 
+        case OP_INCHAR:
+        {
+            push(inChar());
+            break;
+        }
+
         // Misc:
         case OP_HALT:
         {

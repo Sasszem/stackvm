@@ -29,5 +29,6 @@ class VM
         Error *getError();
         void (*outChar)(cell);
         void (*outNum)(cell);
+        cell (*inChar)(void);
         cell (*inNum)(void);
 };
