@@ -179,6 +179,8 @@ class Compiler(object):
             raise Exception("Label {} is already defined!".format(label))
         
         self.label_definitions[label]=loc
+        if not label in self.label_locations:
+            self.label_locations[label]=[]
     
     def make_binary(self, data):
         "Translate a sequence of number to a sequence of bytes"
