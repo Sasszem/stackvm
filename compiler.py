@@ -49,6 +49,7 @@ class Compiler(object):
                 # IO
                 "outchar":  "OP_OUTCHAR",
                 "outnum":   "OP_OUTNUM",
+                "innum":    "OP_INNUM",
 
                 # other
                 "halt":     "OP_HALT",

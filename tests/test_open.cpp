@@ -65,6 +65,13 @@ void outNum(cell num)
     std::cout<<num;
 }
 
+cell inNum()
+{
+    cell ret;
+    std::cin>>ret;
+    return ret;
+}
+
 int main(int argc, char* argv[])
 {
     if (argc==1)
@@ -82,6 +89,7 @@ int main(int argc, char* argv[])
 
     m->outChar = &outChar;
     m->outNum = &outNum;
+    m->inNum = &inNum;
     while (m->running)
     {
         m->printStack();

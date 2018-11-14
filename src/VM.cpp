@@ -235,13 +235,17 @@ void VM::exec(cell opcode)
             break;
         }
 
-
         case OP_OUTNUM:
         {
             outNum(pop());
             break;
         }
 
+        case OP_INNUM:
+        {
+            push(inNum());
+            break;
+        }
 
         // Misc:
         case OP_HALT:
