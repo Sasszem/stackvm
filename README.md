@@ -2,7 +2,7 @@
 A stack-based VM for embedding
 
 I designed and implemented this virtual machine for embedding purposes, for ex. in microcontrollers, using the Arduino IDE.
-
+I have not embedded it in any Arduino project yet, but I plan to do that soon.
 I used some ideas from https://github.com/cslarsen/stack-machine.
 
 
