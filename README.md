@@ -69,7 +69,7 @@ BTW FORTH also does this
 Take a look at src/opcodes.hpp
 
 ## Configuration:
-See src/config.hpp
+See `src/config.hpp`
 You can configure:
  - RAM size
  - stack size
@@ -77,7 +77,9 @@ You can configure:
  - stack underflow behaviour
    (error/0)
  - cell type
- 
+
+Note: With the current build config, the configuration is global to all instances built from the same object file.
+
 Currently, stack, call stack, ram and the program itself are sharing the same memory with maximum size `VM_RAM_SIZE`, but that might change in the future.
 
 ## Errors
@@ -109,10 +111,12 @@ Features:
  - ASM-like syntax
  - FORTH-like syntax
  - Labels
- - uses cpp(the c preprocessor)
+ - __uses cpp(the c preprocessor)__
  - forward-referencing labels
  - easy2use command-line interface
  - pulls the opcodes from the hpp definitions to ensure compatibility
+ 
+__C like preprocessor macros are supported__
  
 Instructions are named like in this document, except:
  - addition, substraction, etc. are + - * / %
