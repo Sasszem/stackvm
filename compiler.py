@@ -149,7 +149,7 @@ class Compiler(object):
             return array("B",token).tolist()
 
         else:
-            return [self.commands[token]]
+            return [self.commands[token.lower()]]
             # TODO: Print some fancier error if no such command
 
     def place_label_values(self, data):
